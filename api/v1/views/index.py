@@ -1,3 +1,7 @@
 #!/usr/bin/python3
-"""AirBnB v3 flask Api v1 entrypoint"""
-import flask
+
+from api.v1.views import app_views
+
+@app_views.route('/status')
+def status():
+    return {"status": "OK"}
